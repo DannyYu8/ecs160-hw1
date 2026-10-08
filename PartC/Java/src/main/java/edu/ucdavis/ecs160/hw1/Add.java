@@ -4,4 +4,9 @@ public class Add extends BinaryExpr {
     public Add(Expr left, Expr right) {
         super(left, right);
     }
+
+    @Override
+    public <T> T accept(ExprVisitor<T> visitor) {
+        return visitor.visit(this);
+    }
 }

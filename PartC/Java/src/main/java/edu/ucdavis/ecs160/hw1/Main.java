@@ -2,6 +2,7 @@ package edu.ucdavis.ecs160.hw1;
 
 public class Main {
     private static int testNumber = 0;
+    private static final Evaluator evaluator = new Evaluator();
 
     public static void main(String[] args) {
         boolean assertionsEnabled = false;
@@ -52,7 +53,7 @@ public class Main {
     }
 
     private static void check(Expr expr, int expected) {
-        int actual; // FILL THIS!
+        int actual = expr.accept(evaluator);
         testNumber++;
         System.out.println("Test " + testNumber + " = " + actual);
         assert actual == expected : "Test " + testNumber + ": expected " + expected + ", got " + actual;
