@@ -2,6 +2,7 @@ package edu.ucdavis.ecs160.hw1;
 
 public class Main {
     private static int testNumber = 0;
+    // instantiates evaluator
     private static final Evaluator evaluator = new Evaluator();
 
     public static void main(String[] args) {
@@ -53,6 +54,7 @@ public class Main {
     }
 
     private static void check(Expr expr, int expected) {
+        // invokes the accept method on the expression
         int actual = expr.accept(evaluator);
         testNumber++;
         System.out.println("Test " + testNumber + " = " + actual);

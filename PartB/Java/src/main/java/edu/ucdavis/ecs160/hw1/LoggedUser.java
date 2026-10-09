@@ -1,5 +1,5 @@
 package edu.ucdavis.ecs160.hw1;
-
+// decorator
 public class LoggedUser implements User {
     private User delegate;
 

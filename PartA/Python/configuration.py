@@ -1,5 +1,6 @@
 class Configuration:
 
+    # name mangling
     __instance = None
 
     def __init__(self):

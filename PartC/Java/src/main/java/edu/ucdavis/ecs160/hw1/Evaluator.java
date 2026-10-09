@@ -1,5 +1,6 @@
 package edu.ucdavis.ecs160.hw1;
 
+// evaluator operation as a concrete visitor
 public class Evaluator implements ExprVisitor<Integer> {
     @Override
     public Integer visit(Num num) {

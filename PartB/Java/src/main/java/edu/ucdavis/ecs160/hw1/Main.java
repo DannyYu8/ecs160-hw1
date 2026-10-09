@@ -2,7 +2,7 @@ package edu.ucdavis.ecs160.hw1;
 
 public class Main {
     public static void main(String[] args) {
-
+        // LoggedUser decorator
         User user = new LoggedUser(new AdminUser("Alice", "alice@example.com"));
         user.setEmail("alice@ucdavis.edu");
         user.getName();

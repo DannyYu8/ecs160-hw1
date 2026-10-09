@@ -5,12 +5,15 @@
 
 class Configuration {
 public:
+    // gets single instance
     static Configuration& getInstance();
 
+    // deletes to prevent duplicates
     Configuration(const Configuration&) = delete;
     void operator=(const Configuration&) = delete;
 
 private:
+    // prevents external instantiation
     Configuration();
 
     std::string appName;
